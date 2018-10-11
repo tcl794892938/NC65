@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module>
+	<public>
+		<component name="sendxml">
+			<interface>nc.itf.webservice.IErmSendToNCSystem</interface>
+			<implementation>nc.impl.webservice.ErmSendToNCSystemImpl</implementation>
+			<extension class="nc.uap.ws.deploy.OxbWSExtensionProcessor">
+				<wsdl>/nc/itf/webservice/IErmSendToNCSystem.wsdl</wsdl>
+				<address>/sendxml</address>
+			</extension>
+		</component>
+	</public>
+	<private>
+	</private>
+</module>

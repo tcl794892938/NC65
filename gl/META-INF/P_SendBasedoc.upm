@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding='gb2312'?>
+<module name="gl">
+  <public>
+	<component remote="true" singleton="true"  tx="CMT">
+	  <interface>nc.itf.gl.synbase.ISynBaseMaintain</interface>
+	  <implementation>nc.impl.gl.synbase.SynBaseMaintainImpl</implementation>
+	</component>
+	<component remote="true" singleton="true"  tx="CMT">
+	  <interface>nc.itf.gl.synbase.ISynBaseMaintain2</interface>
+	  <implementation>nc.impl.gl.synbase.SynBaseMaintainImpl2</implementation>
+	</component>
+  </public> 
+</module> 

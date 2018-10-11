@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+jaxb:version="2.0"
+xmlns:ns0="http://webservice.itf.nc/IErmSendToNCSystem"
+targetNamespace="http://webservice.itf.nc/IErmSendToNCSystem">
+
+<jaxws:bindings>
+	<jaxws:package name="nc.itf.webservice"/>
+</jaxws:bindings>
+
+<wsdl:types>
+   <xsd:schema xmlns:ns="http://webservice.itf.nc/IErmSendToNCSystem"
+			xmlns:businessException="http://pub.vo.nc/BusinessException"
+			attributeFormDefault="unqualified"
+			elementFormDefault="unqualified"
+			targetNamespace="http://webservice.itf.nc/IErmSendToNCSystem" jaxb:version="2.0">
+	<xsd:annotation>
+    	<xsd:appinfo>
+   			<jaxb:schemaBindings>
+    			<jaxb:package name="nc.itf.webservice"/>
+    		</jaxb:schemaBindings>
+   		</xsd:appinfo>
+   	</xsd:annotation>
+	 <xsd:import namespace="http://pub.vo.nc/BusinessException" schemaLocation="/nc/vo/pub/BusinessException.xsd"/>
+	<xsd:element name="sendXml">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="sendXmlResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+   </xsd:schema>
+</wsdl:types>
+    <wsdl:message name="sendXmlRequest">
+        <wsdl:part name="parameters"  element="ns0:sendXml"/>
+    </wsdl:message>
+    <wsdl:message name="sendXmlResponse">
+        <wsdl:part name="parameters"  element="ns0:sendXmlResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessException">
+        <wsdl:part name="BusinessException"  xmlns:businessException="http://pub.vo.nc/BusinessException"  element="businessException:BusinessException"/>
+    </wsdl:message>
+
+    <wsdl:portType name="IErmSendToNCSystemPortType">
+        <wsdl:operation name="sendXml">
+            <wsdl:input message="ns0:sendXmlRequest" wsaw:Action="urn:sendXml"/>
+            <wsdl:output message="ns0:sendXmlResponse" wsaw:Action="urn:sendXmlResponse"/>
+            <wsdl:fault name="BusinessException" message="ns0:BusinessException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    
+    <wsdl:binding name="IErmSendToNCSystemSOAP11Binding" type="ns0:IErmSendToNCSystemPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="sendXml">
+            <soap:operation soapAction="urn:sendXml" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+     		<wsdl:fault name="BusinessException">
+        		<soap:fault name="BusinessException" use="literal"/>
+      		</wsdl:fault>
+
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IErmSendToNCSystem">
+        <wsdl:port name="IErmSendToNCSystemSOAP11port_http" binding="ns0:IErmSendToNCSystemSOAP11Binding">
+            <soap:address location="http://localhost/uapws/service/IErmSendToNCSystem"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

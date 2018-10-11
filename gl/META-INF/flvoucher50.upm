@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module name="gl">
+	<public>
+		<component priority="0" singleton="true" supportAlias="true"  remote="true" tx="CMT">
+      		<interface>nc.itf.gl.query.IVoucherQuery</interface>
+      		<implementation>nc.bs.gl.query.VoucherQueryImpl</implementation>
+    	</component> 
+	</public>
+	<private>
+	</private>
+</module>
