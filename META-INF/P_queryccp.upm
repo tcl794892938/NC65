@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="gb2312"?>
+<module name="qc">
+  <public>
+    <component   priority="0" singleton="true"  remote="true" tx="CMT"  supportAlias="true">
+      <interface>nc.itf.qc.ccp.IQueryForCCP</interface>
+      <implementation>nc.impl.qc.ccp.QueryForCCPImpl</implementation>
+    </component>
+  </public>
+</module>

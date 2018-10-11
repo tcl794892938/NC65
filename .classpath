@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="uap/classes" path="uap/src/public"/>
+	<classpathentry kind="src" output="uap/classes" path="uap/src/client"/>
+	<classpathentry kind="src" output="uap/classes" path="uap/src/private"/>
+	<classpathentry kind="src" output="uap/classes" path="uap/src/test"/>
+	<classpathentry kind="src" output="uap/classes" path="uap/resources"/>
+	<classpathentry kind="src" path="qc/client"/>
+	<classpathentry kind="src" path="ic/client"/>
+	<classpathentry kind="src" path="qc/public"/>
+	<classpathentry kind="src" path="qc/private"/>
+	<classpathentry kind="src" path="ic/private"/>
+	<classpathentry kind="src" path="so/private"/>
+	<classpathentry kind="src" path="ic/public"/>
+	<classpathentry kind="src" path="so/public"/>
+	<classpathentry kind="src" path="so/client"/>
+	<classpathentry kind="src" path="baseapp/src/public"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Ant_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Product_Common_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Middleware_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Framework_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Public_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Client_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Private_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Lang_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Generated_EJB"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
